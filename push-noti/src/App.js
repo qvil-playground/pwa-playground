@@ -9,7 +9,7 @@ class App extends Component {
     );
     if ("serviceWorker" in navigator && "PushManager" in window) {
       navigator.serviceWorker
-        .register("/sw.js")
+        .register("/service-worker.js")
         .then(swReg => {
           console.log("SW Registered: ", swReg);
           Notification.requestPermission().then(permission => {
