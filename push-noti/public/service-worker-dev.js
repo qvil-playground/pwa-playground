@@ -1,3 +1,7 @@
 self.addEventListener("push", event => {
-  console.log("TCL: event", event);
+  const title = "Push Noti";
+  const options = {
+    body: event.data.text()
+  };
+  event.waitUntil(self.registration.showNotification(title, options));
 });
