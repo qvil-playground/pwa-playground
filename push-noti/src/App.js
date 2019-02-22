@@ -18,7 +18,7 @@ export default function App() {
 
     if ("serviceWorker" in navigator && "PushManager" in window) {
       navigator.serviceWorker
-        .register("/service-worker.js")
+        .register("/service-worker-dev.js")
         .then(swReg => {
           console.log("SW Registered: ", swReg);
           Notification.requestPermission().then(permission => {
